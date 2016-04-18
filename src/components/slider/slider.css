@@ -1,0 +1,25 @@
+img{
+  width: 150px;
+}
+img:not(.active-img) {
+  display: none;
+}
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  border: 1px solid black;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.active-navigator{
+  border-color: blue;
+}

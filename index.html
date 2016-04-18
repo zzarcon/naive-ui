@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Naive Ui</title>
+  <script src="dist/naive-ui.js"></script>
+  <script src="demo/index.js"></script>
+</head>
+<body>
+  <img-slider>
+    <img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=18622165" alt="">
+    <img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=45531272" alt="">
+    <img src="http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=58203419" alt="">
+  </img-slider>
+  <template id="slider-template">
+    <style>
+      @import './src/components/slider/slider.css';
+    </style>
+    <div class="wrapper">
+      <div class="img-wrapper"></div>
+      <ul class="navigator"></ul>
+    </div>
+  </template>
+</body>
+</html>
