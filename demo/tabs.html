@@ -36,6 +36,7 @@
       <input type="text" id="tab-name" value="fooo">
       <textarea id="tab-content">Bar</textarea>
       <button id="add">Add tab</button>
+      <button id="undo">Undo</button>
     </div>
 
     <script src="../dist/naive-ui.js"></script>
@@ -49,6 +50,9 @@
         tabar.add(name, content);
       });
 
+      document.getElementById('undo').addEventListener('click', function() {
+        tabar.undo();
+      });
     </script>
   </body>
 </html>

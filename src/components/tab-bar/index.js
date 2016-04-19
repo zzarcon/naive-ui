@@ -2,6 +2,7 @@ import {$} from '../../utils';
 
 const activeNavClassName = 'active-nav';
 const activeSectionClassName = 'active-section';
+const actions = [];
 
 function onTabClick(e) {
   const target = e.target;
@@ -27,8 +28,20 @@ const add = (element) => {
 
     $('.tab-nav', element).appendChild(nav);
     $('.tab-content', element).appendChild(content);
+
+    actions.push(name);
   }
 }
+
+const undo = (element) => {
+  return () => {
+    const name = actions.pop();
+    if (!name) return;
+
+    $(`.tab-nav [data-link="${name}"]`, element).remove();
+    $(`.tab-content [data-section="${name}"]`, element).remove();
+  };
+};
 
 export default (element = '', options) => {
   element = typeof element === 'string' ? $(element) : element;
@@ -36,6 +49,7 @@ export default (element = '', options) => {
   $('.tab-nav', element).addEventListener('click', onTabClick);
 
   return {
-    add: add(element, options)
+    add: add(element),
+    undo: undo(element)
   };
 }

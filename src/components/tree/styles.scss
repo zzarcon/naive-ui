@@ -1,0 +1,36 @@
+.tree{
+  list-style: none;
+  padding: 10px;
+  border: 1px solid;
+
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+
+  .tree-parent{
+    &.visible{
+      > ul {
+        display: block;
+      }
+    }
+    .tree-title{
+      cursor: pointer;
+      background-color: cornflowerblue;
+      
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      padding-left: 10px;
+      display: none;
+    }
+  }
+
+  li{
+    border: 1px solid black;
+    padding: 5px;
+  }
+}

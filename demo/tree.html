@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="../src/components.css">
+    <style>
+      body{
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="../dist/naive-ui.js"></script>
+    <script>
+      const object = {
+        version: '1.0.0',
+        sections: ['home', 'users', 'team', 'about'],
+        cars: {
+          audi: ['a1', 'a4', 'a6'],
+          seat: ['panda', 'ibiza']
+        },
+        author: 'Hector Zarco',
+        cities: ['Valencia', 'Barcelona', 'Linz'],
+        continents: {
+          europe: {
+            countries: ['Spain', 'France'],
+            concurrencies: ['Peseta', 'Euro']
+          },
+          america: {
+            countries: ['Canada', 'USA', 'Argentina'],
+            concurrencies: ['Dollar', 'Peso']
+          }
+        }
+      };
+      const tree = new Tree(document.body, object);
+    </script>
+  </body>
+</html>
