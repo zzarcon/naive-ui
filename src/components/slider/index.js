@@ -1,7 +1,7 @@
   /**
  * TODO: admit active img 
  * TODO: Styles
- * TODO: Handle begining/end of navigation
+ * TODO: Handle begining/end of navigation  
  */
 const activeClassName = 'active-img';
 const activeNavigator = 'active-navigator';

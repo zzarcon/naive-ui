@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="../src/components.css">
+    <style>
+      #controls{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        display: flex;
+      }
+      #controls *{
+        height: inherit;
+      }
+      #tabs{
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="tabs" class="tab-container">
+      <ul class="tab-nav">
+        <li data-link="users" class="active-nav">Users</li>
+        <li data-link="comments">Comments</li>
+        <li data-link="posts">Posts</li>
+      </ul>
+      <ul class="tab-content">
+        <li data-section="users" class="active-section">123</li>
+        <li data-section="comments">456</li>
+        <li data-section="posts">789</li>
+      </ul>
+    </div>
+    <div id="controls">
+      <input type="text" id="tab-name" value="fooo">
+      <textarea id="tab-content">Bar</textarea>
+      <button id="add">Add tab</button>
+    </div>
+
+    <script src="../dist/naive-ui.js"></script>
+    <script>
+      const tabar = TabBar('#tab-wrapper', {});
+
+      document.getElementById('add').addEventListener('click', function() {
+        var name = document.getElementById('tab-name').value;
+        var content = document.getElementById('tab-content').value;
+        
+        tabar.add(name, content);
+      });
+
+    </script>
+  </body>
+</html>
