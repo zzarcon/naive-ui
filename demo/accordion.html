@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="../src/components.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <ul id="my-accordion">
+      <li>
+        <div class="accordion-title">One</div>
+        <div class="accordion-content">
+          123
+        </div>
+      </li>
+      <li>
+        <div class="accordion-title">Two</div>
+        <div class="accordion-content">
+          456
+        </div>
+      </li>
+      <li>
+        <div class="accordion-title">Three</div>
+        <div class="accordion-content">
+          789
+        </div>
+      </li>
+    </ul>
+    <script src="../dist/naive-ui.js"></script>
+    <script>
+      Accordion('#my-accordion', {selected: 2});
+    </script>
+  </body>
+</html>

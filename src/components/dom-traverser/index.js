@@ -1,0 +1,1 @@
+//Write a JS code to travers the DOM and find an element with a specified class name
