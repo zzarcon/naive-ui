@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="../src/components.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="my-dropdown">
+      <button class="drop-button">Companies</button>
+      <ul class="drop-items">
+        <li>Amazon</li>
+        <li>Facebook</li>
+        <li>Google</li>
+        <li>Twitter</li>
+      </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="../dist/naive-ui.js"></script>
+    <script>
+      $('#my-dropdown').drop({
+        _hover: true,
+        overlay: true,
+        onClick: (element) => {
+          console.log(element);
+        }
+      });
+    </script>
+  </body>
+</html>

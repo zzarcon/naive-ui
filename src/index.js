@@ -4,6 +4,7 @@ import TabBar from './components/tab-bar';
 import Tree from './components/tree';
 import Tags from './components/tags';
 import Accordion from './components/accordion';
+import dropdown from './components/drop-down';
 
 window.Tags = Tags;
 window.TabBar = TabBar;
