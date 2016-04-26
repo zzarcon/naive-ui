@@ -18,6 +18,9 @@
         <li>Twitter</li>
       </ul>
     </div>
+    <div id="search">
+      <input type="text" class="search-input" autofocus>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="../dist/naive-ui.js"></script>
     <script>
@@ -27,6 +30,10 @@
         onClick: (element) => {
           console.log(element);
         }
+      });
+
+      $('#search').search({
+        results: ['amazon', 'facebook', 'google', 'twitter', 'pinterest']
       });
     </script>
   </body>

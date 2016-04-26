@@ -39,3 +39,40 @@ $.fn.drop.options = {
   overlay: false,
   onClick: () => {}
 };
+
+$.fn.search = function(options = {results: []}) {
+  const element = $(this);
+  const input = element.find('.search-input');
+  const {results} = options;
+  const resultsHtml = results.map(r => {
+    return `<li class="search-result">${r}</li>`;
+  }).join('');
+  
+  element.addClass('searchable');
+  element.append(`
+    <ul class="search-results-wrapper">${resultsHtml}</ul>
+    <div class="search-empty">No results</div>
+  `);  
+
+  input.on('keyup', function(e) {
+    const input = $(this);
+    if (e.keyCode === 27) {
+      input.val('');
+    }
+
+    const value = input.val();
+    const matches = results.filter(r => r.includes(value));
+    const wrapperAction = value ? 'show' : 'hide';
+    const noResultsAction = matches.length ? 'hide' : 'show';
+
+    element.find('.search-results-wrapper')[wrapperAction]();
+    element.find('.search-empty')[noResultsAction]();
+
+    element.find('.search-result').each(function(_, result) {
+      let el = $(result);
+      const action = matches.includes(el.text()) ? 'show' : 'hide';
+
+      el[action]();
+    });
+  });
+};
