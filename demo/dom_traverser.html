@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Clone deep</title>
+    <link rel="stylesheet" href="../src/components.css">
+  </head>
+  <body>
+    <script src="../dist/naive-ui.js"></script>
+    <div>
+      <div>
+        <div>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+        </div>
+      </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li>
+          <div></div>
+          <div>
+            <span>
+              <a id="foo">Bingo</a>
+            </span>
+          </div>
+        </li>
+        <li>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script>
+      const element = findElement('foo');
+
+      console.log('element', element);
+    </script> 
+  </body>
+</html>

@@ -5,8 +5,10 @@ import Tree from './components/tree';
 import Tags from './components/tags';
 import Accordion from './components/accordion';
 import dropdown from './components/drop-down';
+import {findElement} from './components/dom-traverser';
 import {cloneDeep} from './utils';
 
+window.findElement = findElement;
 window.Tags = Tags;
 window.TabBar = TabBar;
 window.Tree = Tree;
