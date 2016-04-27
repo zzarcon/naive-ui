@@ -2,6 +2,8 @@
 //http://getbootstrap.com/components/#dropdowns
 // Overlay functionality https://dev7studios.com/dropit/#
 
+const $ = window.$ = {fn: {}};
+
 $.fn.drop = function(options) {
   options = $.extend($.fn.drop.options, options);
   const element = $(this);

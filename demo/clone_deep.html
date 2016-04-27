@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Clone deep</title>
+    <link rel="stylesheet" href="../src/components.css">
+  </head>
+  <body>
+    <script src="../dist/naive-ui.js"></script>
+    <script>
+      const obj1 = {
+        firstName: 'hector',
+        lastName: 'zarco',
+        country: {
+          name: 'Spain',
+          city: 'Valencia'
+        },
+        cars: ['audi', 'mercedes', 'bwn'],
+        talk() {
+          console.log(`${this.firstName} - ${this.lastName}`);
+        }
+      };
+
+      const obj2 = cloneDeep(obj1);
+
+      console.log(obj1);
+      console.log(obj2);
+
+      console.log(JSON.stringify(obj1) === JSON.stringify(obj2));
+    </script> 
+  </body>
+</html>
